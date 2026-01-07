@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:islami/core/routing/app_routes.dart';
 import 'package:islami/core/theming/app_text_styles.dart';
 
 import '../../../core/theming/app_colors.dart';
@@ -52,7 +54,7 @@ class IntroScreen extends StatelessWidget {
 
       done: Text("Finish", style: AppTextStyles.font16GoldBold),
       onDone: () {
-        Navigator.pushReplacementNamed(context, 'home');
+        GoRouter.of(context).go(AppRoutes.quran);
       },
       back: Text('Back', style: AppTextStyles.font16GoldBold),
       showDoneButton: true,
