@@ -20,7 +20,7 @@ class SebhaScreen extends StatelessWidget {
               foregroundDecoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    AppColors.black.withAlpha(110),
+                    AppColors.black.withAlpha(120),
                     AppColors.black.withAlpha(220),
                   ],
                   begin: Alignment.topCenter,
