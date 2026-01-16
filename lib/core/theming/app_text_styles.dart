@@ -8,6 +8,12 @@ abstract final class AppTextStyles {
     color: AppColors.primary,
   );
 
+  static final font36WhiteBold = TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+  );
+
   static final font20GoldBold = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
