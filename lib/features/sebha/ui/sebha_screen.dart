@@ -42,7 +42,7 @@ class SebhaScreen extends StatelessWidget {
                 'سَبِّحِ اسْمَ رَبِّكَ الأعلى ',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 35,
                   color: AppColors.white,
                   fontWeight: FontWeight.bold,
                 ),

@@ -11,34 +11,37 @@ class SebhaBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SebhaCubit(),
-      child: Stack(
-        children: [
-          Image.asset('assets/images/sebha_body_bg.png'),
-          Positioned.fill(
-            child: BlocBuilder<SebhaCubit, SebhaState>(
-              builder: (context, state) {
-                return InkWell(
-                  onTap: (){
-                    context.read<SebhaCubit>().incrementCounter();
-                  },
-                  child: Column(
-                      mainAxisAlignment: .center,
-                      children: [
-                        Text(
-                            'سبحان الله',
-                            style: AppTextStyles.font36WhiteBold
-                        ),
-                        Text(
-                            state.counter.toString(),
-                            style: AppTextStyles.font36WhiteBold
-                        ),
-                      ]
-                  ),
-                );
-              },
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Stack(
+          children: [
+            Image.asset('assets/images/sebha_body_bg.png'),
+            Positioned.fill(
+              child: BlocBuilder<SebhaCubit, SebhaState>(
+                builder: (context, state) {
+                  return InkWell(
+                    onTap: (){
+                      context.read<SebhaCubit>().incrementCounter();
+                    },
+                    child: Column(
+                        mainAxisAlignment: .center,
+                        children: [
+                          Text(
+                              'سبحان الله',
+                              style: AppTextStyles.font36WhiteBold
+                          ),
+                          Text(
+                              state.counter.toString(),
+                              style: AppTextStyles.font36WhiteBold
+                          ),
+                        ]
+                    ),
+                  );
+                },
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
